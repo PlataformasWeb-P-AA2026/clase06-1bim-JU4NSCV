@@ -13,8 +13,8 @@ saludos = session.query(Saludo).all()
 # Mostrar con Streamlit
 st.title("Presentación de todos los Saludos")
 
-for saludo  in saludos:
-    st.write(saludo)
+for saludo in saludos:
+    st.write(f"{saludo.mensaje.upper()} {saludo.tipo.upper()}")
     st.markdown("---")
 
 st.markdown("---")
